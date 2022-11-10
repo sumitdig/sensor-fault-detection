@@ -61,7 +61,8 @@ jobs:
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-          
+          echo "$ECR_REGISTRY"
+          echo "$ECR_REPOSITORY"
           
   Continuous-Deployment:
     needs: build-and-push-ecr-image
