@@ -19,7 +19,6 @@ import os
 
 env_file_path=os.path.join(os.getcwd(),"env.yaml")
 
-
 def set_env_variable(env_file_path):
 
     if os.getenv('MONGO_DB_URL',None) is None:
